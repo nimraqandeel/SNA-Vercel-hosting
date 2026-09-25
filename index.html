@@ -2,9 +2,11 @@
 <html>
 
 <head>
-    <title>SNA Lab Restricted</title>
+
+    <title>SNA Lab Role Segmentation</title>
 
     <script>
+
         function login() {
 
             const user = document.getElementById("username").value;
@@ -19,9 +21,31 @@
 
             if (accounts[user] === pass) {
 
-                document.body.innerHTML =
-                    "<h1>Welcome " + user + "!</h1>" +
-                    "<p>You have access to the SNA Lab site.</p>";
+                if (user === "pc1") {
+
+                    document.body.innerHTML =
+                        "<h1>DNS Role</h1>" +
+                        "<p>Edit hosts file, run ping/nslookup.</p>";
+
+                } else if (user === "pc2") {
+
+                    document.body.innerHTML =
+                        "<h1>Web Server Role</h1>" +
+                        "<p>Deploy site and verify uptime.</p>";
+
+                } else if (user === "pc3") {
+
+                    document.body.innerHTML =
+                        "<h1>Client Role</h1>" +
+                        "<p>Access site and run tracert.</p>";
+
+                } else if (user === "pc4") {
+
+                    document.body.innerHTML =
+                        "<h1>Monitoring Role</h1>" +
+                        "<p>Capture traffic with Wireshark or DevTools.</p>";
+
+                }
 
             } else {
 
@@ -29,6 +53,7 @@
 
             }
         }
+
     </script>
 
 </head>
