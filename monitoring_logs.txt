@@ -1,0 +1,4 @@
+Monitoring Logs
+
+Capture website traffic using Wireshark or browser DevTools.
+Observe network requests during site access.

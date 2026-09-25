@@ -1,0 +1,5 @@
+Client Notes
+
+Access the lab website.
+Run tracert lab.local.
+Record the routing hops.

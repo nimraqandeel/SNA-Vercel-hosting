@@ -1,0 +1,4 @@
+Web Server Tasks
+
+Deploy the website on Vercel.
+Verify that the website is accessible.

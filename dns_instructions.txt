@@ -1,0 +1,4 @@
+DNS Instructions
+
+Configure the hosts file.
+Test lab.local using ping and nslookup.
