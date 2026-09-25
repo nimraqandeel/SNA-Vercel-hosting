@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>SNA Lab</title>
+    <title>SNA Lab Restricted</title>
+
+    <script>
+        function login() {
+
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+
+            const accounts = {
+                "pc1": "dns123",
+                "pc2": "web123",
+                "pc3": "client123",
+                "pc4": "monitor123"
+            };
+
+            if (accounts[user] === pass) {
+
+                document.body.innerHTML =
+                    "<h1>Welcome " + user + "!</h1>" +
+                    "<p>You have access to the SNA Lab site.</p>";
+
+            } else {
+
+                alert("Access Denied");
+
+            }
+        }
+    </script>
+
 </head>
+
 <body>
-    <h1>Hello from SNA Lab!</h1>
-    <p>This is my online lab server.</p>
+
+    <h2>Restricted Access Login</h2>
+
+    <label>
+        Username:
+        <input type="text" id="username">
+    </label>
+
+    <br>
+
+    <label>
+        Password:
+        <input type="password" id="password">
+    </label>
+
+    <br>
+
+    <button onclick="login()">Login</button>
+
 </body>
+
 </html>
