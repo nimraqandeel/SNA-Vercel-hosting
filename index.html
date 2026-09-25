@@ -1,83 +1,29 @@
-<!DOCTYPE html>
-<html>
+<h2>Shared Files</h2>
 
-<head>
+<ul>
 
-    <title>SNA Lab Role Segmentation</title>
+    <li>
+        <a href="dns_instructions.txt" download>
+            DNS Instructions
+        </a>
+    </li>
 
-    <script>
+    <li>
+        <a href="web_tasks.txt" download>
+            Web Server Tasks
+        </a>
+    </li>
 
-        function login() {
+    <li>
+        <a href="client_notes.txt" download>
+            Client Notes
+        </a>
+    </li>
 
-            const user = document.getElementById("username").value;
-            const pass = document.getElementById("password").value;
+    <li>
+        <a href="monitoring_logs.txt" download>
+            Monitoring Logs
+        </a>
+    </li>
 
-            const accounts = {
-                "pc1": "dns123",
-                "pc2": "web123",
-                "pc3": "client123",
-                "pc4": "monitor123"
-            };
-
-            if (accounts[user] === pass) {
-
-                if (user === "pc1") {
-
-                    document.body.innerHTML =
-                        "<h1>DNS Role</h1>" +
-                        "<p>Edit hosts file, run ping/nslookup.</p>";
-
-                } else if (user === "pc2") {
-
-                    document.body.innerHTML =
-                        "<h1>Web Server Role</h1>" +
-                        "<p>Deploy site and verify uptime.</p>";
-
-                } else if (user === "pc3") {
-
-                    document.body.innerHTML =
-                        "<h1>Client Role</h1>" +
-                        "<p>Access site and run tracert.</p>";
-
-                } else if (user === "pc4") {
-
-                    document.body.innerHTML =
-                        "<h1>Monitoring Role</h1>" +
-                        "<p>Capture traffic with Wireshark or DevTools.</p>";
-
-                }
-
-            } else {
-
-                alert("Access Denied");
-
-            }
-        }
-
-    </script>
-
-</head>
-
-<body>
-
-    <h2>Restricted Access Login</h2>
-
-    <label>
-        Username:
-        <input type="text" id="username">
-    </label>
-
-    <br>
-
-    <label>
-        Password:
-        <input type="password" id="password">
-    </label>
-
-    <br>
-
-    <button onclick="login()">Login</button>
-
-</body>
-
-</html>
+</ul>
